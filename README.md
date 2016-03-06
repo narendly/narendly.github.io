@@ -1,7 +1,5 @@
 #BCL Lab Research Journal 
-===================
 Hunter Lee
-
 ----------------------------
 
 

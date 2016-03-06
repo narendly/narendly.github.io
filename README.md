@@ -1,5 +1,4 @@
-#BCL Lab Research Journal 
-Hunter Lee
+#BCL Lab Research Journal--Hunter Lee
 ----------------------------
 
 

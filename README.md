@@ -12,6 +12,7 @@
  - Measure performance varying parameters (need to clarify--what changes? number of cores? number of slaves?)
  - Plot the performance data using R or Matlab ([quick plotting guide for R](http://www.statmethods.net/graphs/scatterplot.html))--already have RStudio/MATLAB installed.
  - Use Linux sed, vim text file processing, and UNIX reg. expressions
+ - A good tutorial on using Spark mllib SVM ([here](https://github.com/mcapuccini/spark-tutorial))
 
 ## Things learned ##
 

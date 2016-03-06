@@ -54,3 +54,5 @@
 ## Deliverables ##
 
 - [Here](https://docs.google.com/spreadsheets/d/1-mFhtp_NncUUs5-h-z6MeQCSnZJQvV9UDCOnsH6N1ZY/edit?usp=sharing) is elapsed time measured by using  `System.nanoTime()` command.
+
+- ![Elapsed Time (ns) vs Number of Cores](https://github.com/narendly/narendly.github.io/blob/master/Plot.png?raw=true)

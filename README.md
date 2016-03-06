@@ -49,3 +49,8 @@
 `sudo adduser --ingroup hadoop hduser`
  - Performed reboot after each install
  - Dataset that I downloaded had a different format from Spark's `sample_libsvm_data.txt`. I need to figure out a way to convert a particular dataset into a format that SVM library can read. (Converting it to RDD)
+
+
+## Deliverables ##
+
+- [Here](https://docs.google.com/spreadsheets/d/1-mFhtp_NncUUs5-h-z6MeQCSnZJQvV9UDCOnsH6N1ZY/edit?usp=sharing) is elapsed time measured by using  `System.nanoTime()` command.

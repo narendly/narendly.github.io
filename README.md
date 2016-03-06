@@ -68,3 +68,45 @@
     ylabel('Elapsed Time (ns)'); 
     title('Performance Plot: Spark Standalone, Worker = 1, Memory = 1024MB');
 
+- Scala script used to measure performance
+    //  Starting master and slaves
+    //  ./sbin/start-master.sh
+    
+    //  Slaves
+    //  ./sbin/start-slave.sh spark://ubuntu:7077 
+    
+    //  Running the shell:
+    //  ./bin/spark-shell --master local[1] //Number is # of cores
+    
+    //  Different cores
+    //  ./bin/spark-shell --master spark://ubuntu:7077  --total-executor-cores <numCores>
+    
+    
+    import org.apache.spark.SparkConf
+    import org.apache.spark.SparkContext
+    import org.apache.spark.mllib.classification.SVMWithSGD
+    import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
+    import org.apache.spark.mllib.util.MLUtils
+    
+    val t0 = System.nanoTime()
+    
+    val data = MLUtils.loadLibSVMFile(sc, "SimpleSparkProject/pubchem.svm")
+    val splits = data.randomSplit(Array(0.8, 0.2), seed = 11L) 
+    val training = splits(0).cache() 
+    val test = splits(1)
+    val numIterations = 100
+    val model = SVMWithSGD.train(training, numIterations)
+    model.clearThreshold()
+    
+    val distAndLabels = test.map { testExample =>
+    val distance = model.predict(testExample.features) (distance,testExample.label) }
+    
+    val metrics = new BinaryClassificationMetrics(distAndLabels)
+    val auROC = metrics.areaUnderROC()
+    
+    println("Area under ROC = " + auROC)
+    
+    val t1 = System.nanoTime()
+    
+    println("Elapsed time: " + (t1 - t0) + "ns")
+    println((t1 - t0))

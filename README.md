@@ -1,6 +1,4 @@
-# narendly.github.io
-
-BCL Lab Research Journal 
+#BCL Lab Research Journal 
 ===================
 Hunter Lee
 

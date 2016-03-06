@@ -59,3 +59,9 @@
 
 
 ## Script and Dataset ##
+    cores = [1 2 3 4]; 
+    times = [60009873189 50254953753 44273464774 42287467148]; 
+    plot(cores, times); 
+    xlabel('Number of Cores'); 
+    ylabel('Elapsed Time (ns)'); 
+    title('Performance Plot: Spark Standalone, Worker = 1, Memory = 1024MB');

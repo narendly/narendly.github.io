@@ -58,9 +58,9 @@ sudo adduser --ingroup hadoop hduser
 
 ## Deliverables ##
 
-- [Here](https://docs.google.com/spreadsheets/d/1-mFhtp_NncUUs5-h-z6MeQCSnZJQvV9UDCOnsH6N1ZY/edit?usp=sharing) is elapsed time measured by using  `System.nanoTime()` command.
+- [Here](https://docs.google.com/spreadsheets/d/1-mFhtp_NncUUs5-h-z6MeQCSnZJQvV9UDCOnsH6N1ZY/edit?usp=sharing) is elapsed time measured by using  `System.nanoTime()` command. Measurement for each category is taken three times and averaged.
 
-- The following is a MATLAB Plot
+- The following is the MATLAB Plot for the data in the spreadsheet above
 ![Elapsed Time (ns) vs Number of Cores](https://github.com/narendly/narendly.github.io/blob/master/Plot.png?raw=true)
 
 - It is seen that when you increase the number of cores from 1 to 2, we see a noticeable improvement in performance. However, as you add more cores, the degree of improvement decreases.

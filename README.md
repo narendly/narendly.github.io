@@ -42,11 +42,19 @@
 
  - Ran into trouble: when I started mesos-master with zookeeper running in the background, it would shut off right away. Troubleshooting was not successful.
  
-    `sudo service zookeeper start`
-   `sudo service mesos-master start`
+```sh
+   sudo service zookeeper start
+   sudo service mesos-master start
+```
+
+
  - When trying to set up HDFS, I followed instructions found [here](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/), but terminal would throw an error when I ran this: 
-`sudo addgroup hadoop`
-`sudo adduser --ingroup hadoop hduser`
+
+```sh
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hduser
+```
+
  - Performed reboot after each install
  - Dataset that I downloaded had a different format from Spark's `sample_libsvm_data.txt`. I need to figure out a way to convert a particular dataset into a format that SVM library can read. (Converting it to RDD)
 
@@ -55,8 +63,10 @@
 
 - [Here](https://docs.google.com/spreadsheets/d/1-mFhtp_NncUUs5-h-z6MeQCSnZJQvV9UDCOnsH6N1ZY/edit?usp=sharing) is elapsed time measured by using  `System.nanoTime()` command.
 
+- The following is a MATLAB Plot
 ![Elapsed Time (ns) vs Number of Cores](https://github.com/narendly/narendly.github.io/blob/master/Plot.png?raw=true)
 
+- It is seen that when you increase the number of cores from 1 to 2, we see a noticeable improvement in performance. However, as you add more cores, the degree of improvement decreases.
 
 ## Script and Dataset ##
 
@@ -70,9 +80,6 @@
     ylabel('Elapsed Time (ns)'); 
     title('Performance Plot: Spark Standalone, Worker = 1, Memory = 1024MB');
 ```
-
-
-
 
 
 - Scala script used to measure performance
@@ -121,8 +128,6 @@
     println((t1 - t0))
 ```
 
-
-`
 
 - Dataset used is a PubChem dataset. I was able to find one already in .svm format. Details could be found [here](http://www.ncbi.nlm.nih.gov/pubmed/18829357)
 

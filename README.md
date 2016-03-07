@@ -28,11 +28,7 @@
 ## Progress ##
 
  - Mesos is installed per instructions found [here](https://open.mesosphere.com/getting-started/install/)
- 
  - Another source consulted was [this](https://www.digitalocean.com/community/tutorials/how-to-configure-a-production-ready-mesosphere-cluster-on-ubuntu-14-04)
-
-    
-    
  - So I switched gears, and installed Spark on a stand-alone mode
  - I spent an afternoon reading about SVMs--currently a little bit out of the scope of my academic knowledge, but will need to read up on this more
  - Came across a somewhat helpful tutorial [here](http://web.cs.ucla.edu/~mtgarip/linear.html)
@@ -57,6 +53,7 @@ sudo adduser --ingroup hadoop hduser
 
  - Performed reboot after each install
  - Dataset that I downloaded had a different format from Spark's `sample_libsvm_data.txt`. I need to figure out a way to convert a particular dataset into a format that SVM library can read. (Converting it to RDD)
+ - VMWare VM ran out of space--need to give it more space for next install
 
 
 ## Deliverables ##

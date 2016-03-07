@@ -61,7 +61,9 @@
 ## Script and Dataset ##
 
 - Simple MATLAB Code used to plot
-`    cores = [1 2 3 4]; 
+`    
+    cores = [1 2 3 4];
+
     times = [60009873189 50254953753 44273464774 42287467148]; 
     plot(cores, times); 
     xlabel('Number of Cores'); 
@@ -70,7 +72,8 @@
 
 - Scala script used to measure performance
 
-`    //  Starting master and slaves
+`    
+    //  Starting master and slaves
     //  ./sbin/start-master.sh
     
     //  Slaves

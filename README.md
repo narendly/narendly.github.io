@@ -61,18 +61,23 @@
 ## Script and Dataset ##
 
 - Simple MATLAB Code used to plot
-`    
-    cores = [1 2 3 4];
 
+```sh
+    cores = [1 2 3 4];
     times = [60009873189 50254953753 44273464774 42287467148]; 
     plot(cores, times); 
     xlabel('Number of Cores'); 
     ylabel('Elapsed Time (ns)'); 
-    title('Performance Plot: Spark Standalone, Worker = 1, Memory = 1024MB');`
+    title('Performance Plot: Spark Standalone, Worker = 1, Memory = 1024MB');
+```
+
+
+
+
 
 - Scala script used to measure performance
 
-`    
+```sh
     //  Starting master and slaves
     //  ./sbin/start-master.sh
     
@@ -114,6 +119,9 @@
     
     println("Elapsed time: " + (t1 - t0) + "ns")
     println((t1 - t0))
+```
+
+
 `
 
 - Dataset used is a PubChem dataset. I was able to find one already in .svm format. Details could be found [here](http://www.ncbi.nlm.nih.gov/pubmed/18829357)

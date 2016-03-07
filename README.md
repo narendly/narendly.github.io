@@ -110,3 +110,8 @@
     
     println("Elapsed time: " + (t1 - t0) + "ns")
     println((t1 - t0))
+
+
+- Dataset used is a PubChem dataset. I was able to find one already in .svm format. Details could be found [here](http://www.ncbi.nlm.nih.gov/pubmed/18829357)
+
+- Dataset file is located [here](https://github.com/narendly/narendly.github.io/blob/master/pubchem.svm) ([Attribution](https://github.com/mcapuccini/spark-tutorial/blob/master/spark-tutorial/pubchem.svm)).

@@ -69,6 +69,7 @@
     title('Performance Plot: Spark Standalone, Worker = 1, Memory = 1024MB');
 
 - Scala script used to measure performance
+
     //  Starting master and slaves
     //  ./sbin/start-master.sh
     

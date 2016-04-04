@@ -17,7 +17,7 @@
 ## Things learned ##
 
  - Zookeeper is a Mesos dependency, so it comes with Mesos
- - Zookeeper adds fault-tolerance
+ - Zookeeper adds fault-tolerance (Consensus management)
  - Spark can sit on either Mesos or YARN
  - Spark is an improvement from MapReduce
  - Spark has a library called mllib that has machine learning features

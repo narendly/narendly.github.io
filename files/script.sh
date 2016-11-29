@@ -13,23 +13,71 @@ OUTDIR=/home/hl130/parsec-3.0/output
 #blackscholes
 
 
+ACTION=run
+DATASET=native
+
+APP=blackscholes
 S=20mb #cachesize
 CORE=0x8000 #core
 
-#20mb
-sudo taskset "$CORE" $PARSEDIR/parsecmgmt -a run -p blackscholes -i simsmall >> $OUTDIR/blackscholes/bs_"$S"_raw
-grep -E '^(IPC*|Total*)' $OUTDIR/blackscholes/bs_"$S"_raw >> $OUTDIR/blackscholes/bs_"$S"
-echo -e "blackscholes   "$S":  " >> $OUTDIR/blackscholes/links
-fpaste $OUTDIR/blackscholes/bs_"$S" >> $OUTDIR/blackscholes/links
-echo -e "\n" >> $OUTDIR/blackscholes/links
+sudo taskset "$CORE" /home/hl130/parsec-3.0/bin/parsecmgmt -a "$ACTION" -p "$APP" -i "$DATASET" >> $OUTDIR/"$APP"/bs_"$S"_raw
+grep -E '^(IPC*|Total*)' $OUTDIR/"$APP"/"$APP"_"$S"_raw >> $OUTDIR/"$APP"/"$APP"_"$S"
+echo -e ""$APP"   "$S":  " >> $OUTDIR/links
+sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
+echo -e "\n" >> $OUTDIR/links
+
+
+
+S=19mb #cachesize
+CORE=0x4000 #core
+
+sudo taskset "$CORE" /home/hl130/parsec-3.0/bin/parsecmgmt -a "$ACTION" -p "$APP" -i "$DATASET" >> $OUTDIR/"$APP"/bs_"$S"_raw
+grep -E '^(IPC*|Total*)' $OUTDIR/"$APP"/"$APP"_"$S"_raw >> $OUTDIR/"$APP"/"$APP"_"$S"
+echo -e ""$APP"   "$S":  " >> $OUTDIR/links
+sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
+echo -e "\n" >> $OUTDIR/links
+
+
+
+S=15mb #cachesize
+CORE=0x2000 #core
+
+sudo taskset "$CORE" /home/hl130/parsec-3.0/bin/parsecmgmt -a "$ACTION" -p "$APP" -i "$DATASET" >> $OUTDIR/"$APP"/bs_"$S"_raw
+grep -E '^(IPC*|Total*)' $OUTDIR/"$APP"/"$APP"_"$S"_raw >> $OUTDIR/"$APP"/"$APP"_"$S"
+echo -e ""$APP"   "$S":  " >> $OUTDIR/links
+sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
+echo -e "\n" >> $OUTDIR/links
+
+
+
+S=10mb #cachesize
+CORE=0x1000 #core
+
+sudo taskset "$CORE" /home/hl130/parsec-3.0/bin/parsecmgmt -a "$ACTION" -p "$APP" -i "$DATASET" >> $OUTDIR/"$APP"/bs_"$S"_raw
+grep -E '^(IPC*|Total*)' $OUTDIR/"$APP"/"$APP"_"$S"_raw >> $OUTDIR/"$APP"/"$APP"_"$S"
+echo -e ""$APP"   "$S":  " >> $OUTDIR/links
+sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
+echo -e "\n" >> $OUTDIR/links
+
+
+
+S=5mb #cachesize
+CORE=0x800 #core
+
+sudo taskset "$CORE" /home/hl130/parsec-3.0/bin/parsecmgmt -a "$ACTION" -p "$APP" -i "$DATASET" >> $OUTDIR/"$APP"/bs_"$S"_raw
+grep -E '^(IPC*|Total*)' $OUTDIR/"$APP"/"$APP"_"$S"_raw >> $OUTDIR/"$APP"/"$APP"_"$S"
+echo -e ""$APP"   "$S":  " >> $OUTDIR/links
+sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
+echo -e "\n" >> $OUTDIR/links
 
 
 
 S=1mb #cachesize
 CORE=0x400 #core
-#1mb
-sudo taskset "$CORE" $PARSEDIR/parsecmgmt -a run -p blackscholes -i simsmall >> $OUTDIR/blackscholes/bs_"$S"_raw
-grep -E '^(IPC*|Total*)' $OUTDIR/blackscholes/bs_"$S"_raw >> $OUTDIR/blackscholes/bs_"$S"
-echo -e "blackscholes   "$S":  " >> $OUTDIR/blackscholes/links
-fpaste $OUTDIR/blackscholes/bs_"$S" >> $OUTDIR/blackscholes/links
-echo -e "\n" >> $OUTDIR/blackscholes/links
+
+sudo taskset "$CORE" /home/hl130/parsec-3.0/bin/parsecmgmt -a "$ACTION" -p "$APP" -i "$DATASET" >> $OUTDIR/"$APP"/bs_"$S"_raw
+grep -E '^(IPC*|Total*)' $OUTDIR/"$APP"/"$APP"_"$S"_raw >> $OUTDIR/"$APP"/"$APP"_"$S"
+echo -e ""$APP"   "$S":  " >> $OUTDIR/links
+sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
+echo -e "\n" >> $OUTDIR/links
+

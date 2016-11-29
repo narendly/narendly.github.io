@@ -21,8 +21,8 @@ function run_experiment {
 APP=$1
 DATASET=$2
 
-S=20mb #cachesize
-CORE=0x8000 #core
+#S=20mb #cachesize
+CORE=0x200 #core
 
 
 for SIZE in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20

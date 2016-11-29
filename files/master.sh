@@ -53,4 +53,8 @@ done
 } 
 
 
-run_experiment blackscholes simlarge
+run_experiment blackscholes native
+run_experiment swaptions native
+run_experiment ferret native
+run_experiment canneal native
+run_experiment dedup native

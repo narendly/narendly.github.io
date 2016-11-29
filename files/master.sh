@@ -34,6 +34,9 @@ binary=$(echo "obase=2;$decimal" | bc)
 hex=$(echo "obase=16;ibase=2;$binary" | bc)
 
 
+echo
+echo "Running $1 with input $2 on cache size: $SIZE MB. . ."
+echo
 #set the COS and core
 #use COS 9 and core 9
 sudo pqos -e "llc:9=0x"$hex";" 

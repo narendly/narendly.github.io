@@ -30,6 +30,7 @@ sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
 echo -e "\n" >> $OUTDIR/links
 
 
+sleep 3s
 
 S=19mb #cachesize
 CORE=0x4000 #core
@@ -40,7 +41,7 @@ echo -e ""$APP"   "$S":  " >> $OUTDIR/links
 sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
 echo -e "\n" >> $OUTDIR/links
 
-
+sleep 3s
 
 S=15mb #cachesize
 CORE=0x2000 #core
@@ -51,7 +52,7 @@ echo -e ""$APP"   "$S":  " >> $OUTDIR/links
 sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
 echo -e "\n" >> $OUTDIR/links
 
-
+sleep 3s
 
 S=10mb #cachesize
 CORE=0x1000 #core
@@ -62,7 +63,7 @@ echo -e ""$APP"   "$S":  " >> $OUTDIR/links
 sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
 echo -e "\n" >> $OUTDIR/links
 
-
+sleep 3s
 
 S=5mb #cachesize
 CORE=0x800 #core
@@ -73,7 +74,7 @@ echo -e ""$APP"   "$S":  " >> $OUTDIR/links
 sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
 echo -e "\n" >> $OUTDIR/links
 
-
+sleep 3s
 
 S=1mb #cachesize
 CORE=0x400 #core
@@ -84,6 +85,7 @@ echo -e ""$APP"   "$S":  " >> $OUTDIR/links
 sudo fpaste $OUTDIR/"$APP"/"$APP"_"$S" >> $OUTDIR/links
 echo -e "\n" >> $OUTDIR/links
 
+sleep 3s
 } 
 
 
